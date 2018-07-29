@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/LucasSAmaral/Otimizando_com_gulp#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-customize-bootstrap": "0.0.6",
+    "gulp-less": "^4.0.1"
   }
 }
