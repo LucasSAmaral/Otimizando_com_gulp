@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var concat = require('gulp-concat');
 var jsmin = require('gulp-jsmin');
 var rename = require('gulp-rename');
+var uglifycss = require('gulp-uglifycss');
 
 gulp.task('default',['compileBootstrap','lib','js']);
 
@@ -11,6 +12,7 @@ gulp.task('compileBootstrap', function() {
     return gulp.src('./node_modules/bootstrap/less/bootstrap.less')
       .pipe(customizeBootstrap('./dev/styles/less/*.less'))
       .pipe(less())
+      .pipe(uglifycss())
       .pipe(gulp.dest('./dist/css/'));
 });
 
