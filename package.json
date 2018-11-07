@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/LucasSAmaral/Otimizando_com_gulp#readme",
   "devDependencies": {
+    "angular": "^1.7.5",
     "bootstrap": "^3.3.7",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",

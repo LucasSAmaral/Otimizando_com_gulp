@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="App">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <title>Curso de Gulp</title>
 </head>
 
-<body>
+<body ng-controller="IndexController">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -29,7 +29,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Otimizando com Gulp</h1>
+        <h1>{{titulo}}</h1>
         <p>Curso de Gulp. Aprenda a configurar um ambiente de trabalho com o automatizador de tarefas Gulp e configurar uma aplicação com Express e Angular JS.</p>
       </div>
     </div>
@@ -61,6 +61,7 @@
       </footer>
     </div> <!-- /container -->
     <script src="dist/js/lib.js"></script>
+    <script src="dist/js/app.js"></script>
   </body>
 
 </html>
