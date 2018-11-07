@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var customizeBootstrap = require('gulp-customize-bootstrap');
 var less = require('gulp-less');
 var concat = require('gulp-concat');
+var jsmin = require('gulp-jsmin');
+var rename = require('gulp-rename');
 
 gulp.task('default',['compileBootstrap','lib','js']);
 
@@ -21,5 +23,7 @@ gulp.task('lib', function(){
 gulp.task('js', function(){
     return gulp.src(['./dev/app/app.js','./dev/app/controllers.js'])
     .pipe(concat('app.js'))
+    .pipe(jsmin())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js/'));
 });
