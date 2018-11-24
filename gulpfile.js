@@ -9,6 +9,11 @@ var imagemin = require('gulp-imagemin');
 
 gulp.task('default',['compileBootstrap','lib','js','imagem']);
 
+gulp.task('w', () => {
+    gulp.watch('./dev/styles/**/*', ['compileBootstrap']);
+    gulp.watch('./dev/app/**/*', ['js']);
+});
+
 gulp.task('compileBootstrap', function() {
     return gulp.src('./node_modules/bootstrap/less/bootstrap.less')
       .pipe(customizeBootstrap('./dev/styles/less/*.less'))
