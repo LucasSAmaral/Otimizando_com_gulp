@@ -5,8 +5,9 @@ var concat = require('gulp-concat');
 var jsmin = require('gulp-jsmin');
 var rename = require('gulp-rename');
 var uglifycss = require('gulp-uglifycss');
+var imagemin = require('gulp-imagemin');
 
-gulp.task('default',['compileBootstrap','lib','js']);
+gulp.task('default',['compileBootstrap','lib','js','imagem']);
 
 gulp.task('compileBootstrap', function() {
     return gulp.src('./node_modules/bootstrap/less/bootstrap.less')
@@ -28,4 +29,10 @@ gulp.task('js', function(){
     .pipe(jsmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./dist/js/'));
+});
+
+gulp.task('imagem', () => {
+    return gulp.src('./dev/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/img'));
 });
