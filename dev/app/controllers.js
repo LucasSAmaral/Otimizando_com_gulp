@@ -1,3 +1,3 @@
 .controller("IndexController",function($scope){
-    $scope.titulo = "Trabalhando com Gulp";
+    $scope.titulo = "Otimizando com Gulp!!!";
 })
